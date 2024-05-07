@@ -1,0 +1,28 @@
+<div *ngIf="spinner == 0">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label class="form-label" for="inputEmail">Subject Name</label>
+      <input type="text" class="form-control" id="inputEmail" placeholder="Subject Name" name="Name" [(ngModel)]="subjectName" required>
+    </div>
+    <div class="mb-3">
+      <label for="poster" class="drop-container" id="dropcontainer">
+        <img *ngIf="posterPreview" [src]="posterPreview" alt="Poster Preview" />
+        <span *ngIf="!posterPreview" class="drop-title">Poster</span>
+        <input hidden type="file" id="poster" accept="image/*" (change)="onFileSelected($event, 'poster')" required>
+      </label>
+    </div>
+    <div class="mb-3">
+      <label for="book" class="drop-container" id="dropcontainer">
+        <span class="drop-title">Book</span>
+        <input hidden type="file" id="book" accept=".pdf" (change)="onFileSelected($event, 'book')" required>
+        <div *ngIf="bookFile" class="selected-file">{{ bookFile.name }}</div>
+      </label>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <button style="font-size: 40px;" type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </form>
+</div>
+<app-Spinner *ngIf="spinner == 1"></app-Spinner>

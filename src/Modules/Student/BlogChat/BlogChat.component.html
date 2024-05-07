@@ -1,0 +1,21 @@
+
+<div>
+  <h2>Sent Messages</h2>
+  <ul>
+    <li *ngFor="let message of sentMessages">
+      <strong>{{ message.user }}</strong>: {{ message.message }}
+    </li>
+  </ul>
+
+  <h2>Received Messages</h2>
+  <ul>
+    <li *ngFor="let message of receivedMessages">
+      <strong>{{ message.user }}</strong>: {{ message.message }}
+    </li>
+  </ul>
+</div>
+<div>
+  <input type="text" #userInput placeholder="Enter your name">
+  <input type="text" #messageInput placeholder="Type your message">
+  <button (click)="sendMessage(userInput.value, messageInput.value)">Send</button>
+</div>

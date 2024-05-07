@@ -1,0 +1,31 @@
+<div *ngIf="spinner === 0">
+  <form #testForm="ngForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+   
+   <div class="mb-3">
+     <label class="form-label" for="inputQuestion">Test Name</label>
+     <input type="text" class="form-control" id="inputQuestion" placeholder="Test Name" name="TestName" [(ngModel)]="test.name" required>
+   </div>
+   <div class="mb-3">
+     <label for="fullMark" class="form-label">Full Mark</label>
+     <input type="number" id="fullMark" class="form-control" name="fullMark" [(ngModel)]="test.fullMark" required>
+   </div>
+   <div class="mb-3">
+     <label for="count" class="form-label">Count:</label>
+     <input type="number"  class="form-control" id="count" name="count" [(ngModel)]="test.count" required>
+   </div>
+   <div class="mb-3">
+     <label for="poster" class="drop-container" id="dropcontainer">
+       <img *ngIf="posterPreview" [src]="posterPreview" alt="Poster Preview" />
+       <span *ngIf="!posterPreview" class="drop-title">Poster</span>
+       <input hidden type="file" id="poster" accept="image/*" (change)="onFileSelected($event)" required>
+     </label>
+   </div>
+   
+   <div class="mb-3" style="width: 100%; text-align: center;">
+     <input style="font-size: 40px;"  [disabled]="!testForm.valid" type="submit" class="btn btn-primary" value="Save" />
+   </div>
+   <!-- <button type="submit"  [disabled]="!testForm.valid">Submit</button> -->
+ </form>
+ </div>
+ <app-Spinner *ngIf="spinner ===1"></app-Spinner>
+ 

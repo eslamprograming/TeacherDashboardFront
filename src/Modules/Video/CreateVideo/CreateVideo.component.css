@@ -1,0 +1,57 @@
+.drop-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  height: 200px;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.drop-container:hover {
+  border-color: #555;
+  background-color: #f5f5f5;
+}
+
+.drop-container .drop-title {
+  color: #333;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.drop-container .drop-icon {
+  font-size: 3em;
+  color: #666;
+}
+
+.drop-container input[type="file"] {
+  display: none;
+}
+.drop-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* قم بتعديل العرض الأقصى حسب احتياجاتك */
+  height: 200px;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden; /* تطبيق خاصية overflow لمنع التحويل */
+}
+
+.drop-container video {
+  width: 100%;
+  height: auto;
+}

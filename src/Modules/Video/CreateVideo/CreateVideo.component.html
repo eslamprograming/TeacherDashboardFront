@@ -1,0 +1,24 @@
+<div *ngIf="spinner==0">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)" enctype="multipart/form-data" >
+    <div class="mb-3">
+        <label class="form-label" for="inputEmail"  >Video Name</label>
+        <input type="text" class="form-control" id="inputEmail" placeholder="Video name" name="Name" ngModel>
+    </div>
+    
+    <div class="mb-3">
+      <label for="images" class="drop-container" id="dropcontainer">
+          
+        <video *ngIf="posterPreview"  controls>
+          <source src={{posterPreview}} type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+        <span *ngIf="!posterPreview" class="drop-title">Video</span>
+        <input hidden type="file" id="images"  name="video" ngModel (change)="onFileSelected($event)" required>
+      </label>
+    </div>
+    
+    <button style="font-size: 40px;" type="submit" class="btn btn-primary">Save</button>
+  </form>
+  </div>
+  <app-Spinner *ngIf="spinner==1"></app-Spinner>
+  

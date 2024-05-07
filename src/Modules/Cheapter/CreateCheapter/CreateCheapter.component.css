@@ -1,0 +1,60 @@
+.drop-container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+  background: #eee;
+  border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+  color: #222;
+}
+
+.drop-title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+}
+.drop-container {
+  position: relative;
+  display: inline-block;
+  width: 75%; /* Set the width of the container */
+  text-align: center;
+  height: 200px; /* Set the height of the container */
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 10%;
+  overflow: hidden; /* Ensure the image does not exceed container boundaries */
+}
+
+.drop-container:hover {
+  border-color: #aaa;
+}
+
+.drop-container img {
+  width: 100%; /* Ensure the image does not exceed the width of the container */
+  max-height: 100%; /* Ensure the image does not exceed the height of the container */
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease;
+}
+
+.drop-container img:hover {
+  opacity: 0.8;
+}

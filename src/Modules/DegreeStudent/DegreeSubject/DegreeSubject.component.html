@@ -1,0 +1,52 @@
+<div *ngIf="spinner===0">
+<body>
+  
+    <div class="dropdown">
+        <button class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subject&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        <div class="dropdown-content">
+          <a (click)="AllTest(item.id)" *ngFor="let item of subject.values" href="#">{{item.name}}</a>
+         
+        </div>
+      </div>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <div class="dropdown">
+        <button class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        <div class="dropdown-content">
+          <a (click)="AllDegree(item.id)" *ngFor="let item of Test.values" href="#">{{item.name}}</a>
+         
+        </div>
+      </div>
+<h1>Student Degrees</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Degree</th>
+
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of degrees">
+                <td>{{item.student.user.firstName}}&nbsp;{{item.student.user.lastName}}</td>
+                <td>{{item.degree}}</td>
+
+                <!-- <td>
+                    <button class="edit-btn" (click)="Edit(item.id)">Edit</button>
+                    <button class="delete-btn"(click)="Delete(item.Id)">Delete</button>
+                </td> -->
+            </tr>
+           
+            <!-- Additional rows can be added similarly -->
+        </tbody>
+    </table>
+  </body>
+</div>
+<app-Sidebar *ngIf="spinner===1"></app-Sidebar>

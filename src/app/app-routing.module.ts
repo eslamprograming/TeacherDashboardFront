@@ -12,18 +12,15 @@ import { MainQuestionComponent } from 'src/Modules/Question/MainQuestion/MainQue
 import { AllTestQuestionComponent } from 'src/Modules/QuestionTest/AllTestQuestion/AllTestQuestion.component';
 import { CreateTestQuestionComponent } from 'src/Modules/QuestionTest/CreateTestQuestion/CreateTestQuestion.component';
 import { EditTestQuestionComponent } from 'src/Modules/QuestionTest/EditTestQuestion/EditTestQuestion.component';
-import { CountactUsComponent } from 'src/Modules/Sheard/CountactUs/CountactUs.component';
 import { HomeComponent } from 'src/Modules/Sheard/Home/Home.component';
 import { SpinnerComponent } from 'src/Modules/Sheard/Spinner/Spinner.component';
 import { AllStudentComponent } from 'src/Modules/Student/AllStudent/AllStudent.component';
-import { BlogChatComponent } from 'src/Modules/Student/BlogChat/BlogChat.component';
 import { CreateSubjectComponent } from 'src/Modules/Subject/CreateSubject/CreateSubject.component';
 import { EditSubjectComponent } from 'src/Modules/Subject/EditSubject/EditSubject.component';
 import { HomeSubjectComponent } from 'src/Modules/Subject/HomeSubject/HomeSubject.component';
 import { AllTestComponent } from 'src/Modules/Test/AllTest/AllTest.component';
 import { CreateTestComponent } from 'src/Modules/Test/CreateTest/CreateTest.component';
 import { EditTestComponent } from 'src/Modules/Test/EditTest/EditTest.component';
-import { TestComponent } from 'src/Modules/Test/Test.component';
 import { CreateVideoComponent } from 'src/Modules/Video/CreateVideo/CreateVideo.component';
 import { MainVideoComponent } from 'src/Modules/Video/MainVideo/MainVideo.component';
 

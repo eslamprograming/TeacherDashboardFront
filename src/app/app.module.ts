@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { SheardModule } from 'src/Modules/Sheard/Sheard.module';
 import { LayoutComponent } from 'src/Layout/Layout.component';
 import { AuthModule } from 'src/Modules/Auth/Auth.module';
